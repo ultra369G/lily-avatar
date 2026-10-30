@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #050816;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+
+#background {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(80,120,255,0.25),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at bottom,
+            rgba(255,120,200,0.15),
+            transparent 40%
+        ),
+
+        #050816;
+}
+
+/* Canvas */
+
+#lily-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Status */
+
+#status {
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+
+    color: #88aaff;
+
+    font-size: 13px;
+
+    background: rgba(0,0,0,0.4);
+
+    padding: 8px 14px;
+
+    border-radius: 10px;
+
+    backdrop-filter: blur(6px);
+
+    z-index: 20;
+}
+
+/* Speech Bubble */
+
+#speech-bubble {
+
+    position: fixed;
+
+    bottom: 120px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    min-width: 200px;
+    max-width: 500px;
+
+    padding: 14px 20px;
+
+    background: rgba(0,0,0,0.55);
+
+    color: white;
+
+    border-radius: 16px;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transition: 0.4s;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 20;
+}
+
+#speech-bubble.show {
+    opacity: 1;
+}
